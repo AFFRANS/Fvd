@@ -1,0 +1,121 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height:100%;
+  margin:0;
+}
+
+body {
+    --backgroundColor:#e1ddd9;
+    background-color: var(--backgroundColor);
+}
+
+section {
+  min-height:100%;
+  margin:0; padding:5vmin;
+  list-style:none;
+
+  display:grid;
+  grid-template-columns: repeat( auto-fit, max(15em, 30vmin));
+  grid-gap:5vmin;
+  justify-content:center;
+  align-content:center;
+}
+
+li {
+  width:max(15em, 30vmin); height:max(15em, 30vmin);
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  background:white;
+}
+
+
+
+/*
+html, body {
+    height:100%;
+    margin: 0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:2em;
+    background-color: blanchedalmond;
+}
+
+body {
+  min-height:100%;
+  margin:0; padding:2vmin;
+  list-style:none;
+
+  display:grid;
+  grid-template-columns: repeat( auto-fit, max(5em, 2vmin));
+  grid-gap:5vmin;
+  justify-content:center;
+  align-content:center;
+}
+
+section {
+  width:8em;
+  height:8em;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  background:white;
+}
+
+div {
+    transform-origin:center bottom;
+
+    animation-name:groterAni, verkleurAni;
+    animation-duration:2s, 2s;
+    animation-timing-function:ease-in-out;
+}
+*/
+
+div:nth-of-type(1) {
+    --mijnkleur:blue;
+    animation-delay:0s, 1s;
+}
+
+div:nth-of-type(2) {
+    --mijnkleur:green;
+    animation-delay:1s, 2s;
+}
+
+div:nth-of-type(3) {
+    --mijnkleur:red;
+    animation-delay:2s, 3s;
+}
+
+
+@keyframes groterAni {
+    0% {
+        transform:scale(1);
+    }
+    50% {
+        transform:scale(1.5);
+    }
+    100% {
+        transform:scale(1);
+    }
+}
+
+@keyframes verkleurAni {
+    0% {
+        color:inherit;
+    }
+    10%, 60% {
+        color:var(--mijnkleur);
+    }
+    100% {
+        color:inherit;
+    }
+}

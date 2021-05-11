@@ -25,6 +25,11 @@ In zo’n ‘post’ neem je op:
 - golven animatie op safari
 
 
+https://user-images.githubusercontent.com/65559359/117783273-acb41200-b242-11eb-902e-1fa14e4118bd.MOV
+
+
+
+
 /* de code */
 CSS 
 

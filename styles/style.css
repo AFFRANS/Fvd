@@ -219,8 +219,8 @@ section:nth-of-type(2):after {
     content: "";
     position: absolute;
     width: 2.5em;
-    border:solid .25em red;
-    left: 6.5em;
+    border:solid .25em white;
+    left: 36%;
     top: 30em;
     z-index: 110;
 }
@@ -277,7 +277,7 @@ section:nth-of-type(2):hover {
   }
 }
 
-
+/*bellen*/
 section:nth-of-type(2) span:nth-of-type(1):before {
     content:"";
     position:absolute;
@@ -287,10 +287,24 @@ section:nth-of-type(2) span:nth-of-type(1):before {
     border-radius:12em;
 
     overflow:hidden;
-    top: auto;
-    left: 33%;
+    top: 30em;
+    left: 36%;
+    z-index: 112;
 }
 
+section:nth-of-type(2) span:nth-of-type(1):after {
+    content:"";
+    position:absolute;
+    width:1em; height:1em;
+
+    background-color:lightblue;
+    border-radius:12em;
+
+    overflow:hidden;
+    top: 29em;
+    left: 40%;
+    z-index: 113;
+}
 
 
 /*Shrinking for mobile*/

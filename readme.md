@@ -28,7 +28,10 @@ In zo’n ‘post’ neem je op:
 https://user-images.githubusercontent.com/65559359/117783273-acb41200-b242-11eb-902e-1fa14e4118bd.MOV
 
 
-Uploading IMG_6616.MOV…
+
+https://user-images.githubusercontent.com/65559359/117786401-bf7c1600-b245-11eb-9018-9747a340a5f6.MOV
+
+
 
 
 

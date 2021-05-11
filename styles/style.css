@@ -246,8 +246,11 @@ section:nth-of-type(2):hover {
   max-height:150px;
 }
 
+section:nth-of-type(2):hover {
+    animation-iteration-count: infinite;
+}
 
-.bewegen > use {
+.bewegen > use{
   animation: move 25s cubic-bezier(.50,.5,.40,.5) infinite;
 }
 
@@ -307,7 +310,7 @@ section:nth-of-type(2) span:nth-of-type(1):after {
 }
 
 
-/*Shrinking for mobile*/
+Shrinking for mobile
 @media (max-width: 768em) {
   .waves {
     height: 500em;

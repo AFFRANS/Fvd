@@ -28,7 +28,7 @@ body {
 
     background-color: aliceblue;
 
-    @media (prefers-color-scheme:dark){
+    @media {
   body:not(.lightMode) {
     /* dark theme */
     --backgroundColor1: midnightblue;
@@ -39,16 +39,6 @@ body {
     --GreenLetter: green;
     --BlackLetter: black;
     --YellowLetter: yellow;
-/*
-    --titleColor:#D8DCE0;
-    --textColor:#A8ACB0;
-    --backgroundColor:#181C20;
-    --backgroundCardColor:#282C30;
-
-    --accentColor:#004d99;
-    --gradientColor:#8C0D26;
-    --hightLightColor:#995400;
-*/
   }
 }
 }
@@ -224,7 +214,7 @@ section:nth-of-type(2) h1 {
 section:nth-of-type(2):before {
     content:"";
     position:absolute;
-    width:13em; height:7em;
+    width:13em; height:8em;
     border:solid .2em black;
     border-radius:1.5em;
 
@@ -248,9 +238,11 @@ section:nth-of-type(2):after {
     z-index: 110;
 }
 
+/*
 section:nth-of-type(2):hover {
 
 }
+*/
 
 /* de golven*/
 .wave placement {
@@ -269,28 +261,27 @@ section:nth-of-type(2):hover {
   max-height:150px;
 }
 
-/*
 section:nth-of-type(2):hover {
     animation-iteration-count: infinite;
+    animation-fill-mode: both;
 }
-*/
 
-.bewegen > use{
+.bewegen{
   animation: move 25s cubic-bezier(.50,.5,.40,.5) infinite;
 }
 .bewegen:nth-of-type(1) {
   animation-delay: 1s;
   animation-duration: 8s;
 }
-.bewegen > use:nth-of-type(2) {
+.bewegen:nth-of-type(2) {
   animation-delay: -2s;
   animation-duration: 9s;
 }
-.bewegen > use:nth-of-type(3) {
+.bewegen:nth-of-type(3) {
   animation-delay: -3s;
   animation-duration: 12s;
 }
-.bewegen > use:nth-of-type(4) {
+.bewegen:nth-of-type(4) {
   animation-delay: -4s;
   animation-duration: 21s;
 }

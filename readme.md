@@ -28,6 +28,9 @@ In zo’n ‘post’ neem je op:
 https://user-images.githubusercontent.com/65559359/117783273-acb41200-b242-11eb-902e-1fa14e4118bd.MOV
 
 
+Uploading IMG_6616.MOV…
+
+
 
 
 /* de code */

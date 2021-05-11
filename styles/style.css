@@ -6,15 +6,27 @@ html, body {
   height:100%;
   width: 100%;
   margin:0;
-  box-sizing: border-box;
   display:flex;
     justify-content:center;
     align-items:center;
 }
 
 body {
-    --backgroundColor:#e1ddd9;
-    background-color: var(--backgroundColor);
+/*    light theme*/
+    --backgroundColor1: aliceblue;
+    --backgroundColor2: white;
+    background-color: var(--RoodLetter);
+    --mijnkleur:
+    --RoodLetter: red;
+    --BlauwLetter: blue;
+    --GreenLetter: green;
+    --BlackLetter: black;
+    --YellowLetter: yellow;
+
+    color: var(--RoodLetter);
+
+    background-color: aliceblue;
+
 }
 
 section {
@@ -49,7 +61,7 @@ section:nth-of-type(1) {
      font-family: 'Black Han Sans', sans-serif;
     font-size: 2em;
     padding: 50% 0;
-    background-color: aliceblue;
+    background-color: var(--backgroundColor1);
     transform-origin: center bottom;
 }
 
@@ -75,7 +87,7 @@ section:nth-of-type(1):hover span {
     animation-timing-function:ease-in-out;
     display: inline-block;
     transform-origin: right bottom;
-    padding: 1em .05em;;
+    padding: 1em .05em;
 }
 
 
@@ -165,32 +177,39 @@ span:nth-of-type(10) {
 /*-----------------------------------------*/
 /* duiken inbeeld animatie 2*/
 section:nth-of-type(2) {
+    display: flex;
     font-family: 'Black Han Sans', sans-serif;
-    padding: 50% 0;
+    background-color: var(--backgroundColor2);
+    padding: 30em 0;
     position: relative;
+    overflow: hidden;
 }
 
 section:nth-of-type(2) h1 {
     position: absolute;
-    padding: 2em;
-    font-size: 1.5em;
+    padding: 0;
+    font-size: 2.5em;
     z-index: 100;
     top: 50%;
+}
+
+.white space {
+    padding: 0 0 1em 0;
 }
 
 /* de zwarte balk*/
 section:nth-of-type(2):before {
     content:"";
     position:absolute;
-    width:12em; height:8em;
+    width:13em; height:7em;
     border:solid .2em black;
     border-radius:1.5em;
 
     background-image:radial-gradient(transparent .25em, white .25em .625em, transparent .625em),
 
-/*    background-size:1.5em 1.5em;*/
+    background-size:1.5em 1.5em;
     background-repeat:no-repeat;
-/*    background-position:12em 10em, 11em 20em;*/
+    background-position:12em 10em, 11em 20em;
     z-index: 99;
     top: 50%;
 }
@@ -199,10 +218,10 @@ section:nth-of-type(2):before {
 section:nth-of-type(2):after {
     content: "";
     position: absolute;
-    width:2em;
+    width: 2.5em;
     border:solid .25em red;
-    left: 3em;
-    top: 11em;
+    left: 6.5em;
+    top: 30em;
     z-index: 110;
 }
 
@@ -212,9 +231,11 @@ section:nth-of-type(2):hover {
 
 /* de golven*/
 .wave placement {
-  position: relative;
-  left: 2em;
-  top: 20em;
+  position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0em;
+    z-index: 1;
 }
 
 .waves {
@@ -225,23 +246,24 @@ section:nth-of-type(2):hover {
   max-height:150px;
 }
 
-.parallax > use {
+
+.bewegen > use {
   animation: move 25s cubic-bezier(.50,.5,.40,.5) infinite;
 }
 
-.parallax > use:nth-child(1) {
+.bewegen > use:nth-child(1) {
   animation-delay: 1s;
   animation-duration: 8s;
 }
-.parallax > use:nth-child(2) {
+.bewegen > use:nth-child(2) {
   animation-delay: -2s;
   animation-duration: 9s;
 }
-.parallax > use:nth-child(3) {
+.bewegen > use:nth-child(3) {
   animation-delay: -3s;
   animation-duration: 12s;
 }
-.parallax > use:nth-child(4) {
+.bewegen > use:nth-child(4) {
   animation-delay: -4s;
   animation-duration: 21s;
 }
@@ -255,23 +277,28 @@ section:nth-of-type(2):hover {
   }
 }
 
+
+section:nth-of-type(2) span:nth-of-type(1):before {
+    content:"";
+    position:absolute;
+    width:1.5em; height:1.5em;
+
+    background-color:lightblue;
+    border-radius:12em;
+
+    overflow:hidden;
+    top: auto;
+    left: 33%;
+}
+
+
+
 /*Shrinking for mobile*/
 @media (max-width: 768em) {
   .waves {
     height: 500em;
     min-height:6em;
   }
-/*
-  .content {
-    height:30vh;
-  }
-*/
-/*
-  h1 {
-    font-size:24px;
-  }
-}
-*/
 
 
 

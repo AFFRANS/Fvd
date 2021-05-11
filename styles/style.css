@@ -250,23 +250,23 @@ section:nth-of-type(2):hover {
     animation-iteration-count: infinite;
 }
 
-.bewegen > use{
+.bewegen > use:hover{
   animation: move 25s cubic-bezier(.50,.5,.40,.5) infinite;
 }
 
-.bewegen > use:nth-child(1) {
+.bewegen > use:nth-child(1):hover {
   animation-delay: 1s;
   animation-duration: 8s;
 }
-.bewegen > use:nth-child(2) {
+.bewegen > use:nth-child(2):hover {
   animation-delay: -2s;
   animation-duration: 9s;
 }
-.bewegen > use:nth-child(3) {
+.bewegen > use:nth-child(3):hover {
   animation-delay: -3s;
   animation-duration: 12s;
 }
-.bewegen > use:nth-child(4) {
+.bewegen > use:nth-child(4):hover {
   animation-delay: -4s;
   animation-duration: 21s;
 }

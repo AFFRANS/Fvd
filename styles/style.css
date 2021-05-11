@@ -4,7 +4,12 @@
 
 html, body {
   height:100%;
+  width: 100%;
   margin:0;
+  box-sizing: border-box;
+  display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 body {
@@ -13,109 +18,266 @@ body {
 }
 
 section {
-  min-height:100%;
-  margin:0; padding:5vmin;
+    position: relative;
+    text-align: center;
+  min-height:5em;
+  margin:0;
+  padding:5vmin;
   list-style:none;
 
-  display:grid;
-  grid-template-columns: repeat( auto-fit, max(15em, 30vmin));
-  grid-gap:5vmin;
-  justify-content:center;
-  align-content:center;
-}
-
-li {
-  width:max(15em, 30vmin); height:max(15em, 30vmin);
-
   display:flex;
+  grid-template-columns: repeat( auto-fit, max(15em, 30vmin));
   justify-content:center;
-  align-items:center;
+  width: 50%;
+  height: 100%;
 
   background:white;
-}
-
-
-
-/*
-html, body {
-    height:100%;
-    margin: 0;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    font-size:2em;
-    background-color: blanchedalmond;
 }
 
 body {
   min-height:100%;
-  margin:0; padding:2vmin;
+  margin:0;
+  padding:0;
   list-style:none;
 
-  display:grid;
   grid-template-columns: repeat( auto-fit, max(5em, 2vmin));
-  grid-gap:5vmin;
-  justify-content:center;
-  align-content:center;
 }
 
-section {
-  width:8em;
-  height:8em;
-
-  display:flex;
-  justify-content:center;
-  align-items:center;
-
-  background:white;
+/*----------------------------------------------------*/
+/* TOKOY O 2O2O anitmatie 1*/
+section:nth-of-type(1) {
+     font-family: 'Black Han Sans', sans-serif;
+    font-size: 2em;
+    padding: 50% 0;
+    background-color: aliceblue;
+    transform-origin: center bottom;
 }
 
-div {
+section:nth-of-type(1) h1 {
+    position: absolute;
+    padding: 0.5em;
+    font-size: 0.8em;
+    z-index: 100;
+    top: 50%;
+}
+
+section:nth-of-type(1):hover {
+    transform:translate(.1em, -.15em) scale(1);
+    text-shadow:.1em 0 0 MidnightBlue, .625em .625em .1875em rgba(0,0,51,.375);
+}
+
+section:nth-of-type(1):hover span {
     transform-origin:center bottom;
 
     animation-name:groterAni, verkleurAni;
-    animation-duration:2s, 2s;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
     animation-timing-function:ease-in-out;
+    display: inline-block;
+    transform-origin: right bottom;
+    padding: 1em 0;
 }
-*/
 
-div:nth-of-type(1) {
+
+/*TOKYO O 2O2O letters per span*/
+span:nth-of-type(1) {
+    --mijnkleur:black;
+    animation-delay:0s, 0.25s;
+}
+
+span:nth-of-type(2) {
     --mijnkleur:blue;
-    animation-delay:0s, 1s;
+    animation-delay:0.25s, 0.5s;
 }
 
-div:nth-of-type(2) {
-    --mijnkleur:green;
-    animation-delay:1s, 2s;
+span:nth-of-type(3) {
+    --mijnkleur:black;
+    animation-delay:0.5s, 0.75s;
 }
 
-div:nth-of-type(3) {
+span:nth-of-type(4) {
+    --mijnkleur:black;
+    animation-delay:0.75s, 1s;
+}
+
+span:nth-of-type(5) {
+    --mijnkleur:black;
+    animation-delay:1s, 1.25s;
+}
+
+span:nth-of-type(6) {
     --mijnkleur:red;
-    animation-delay:2s, 3s;
+    animation-delay:1.25s, 1.5s;
 }
 
+span:nth-of-type(7) {
+    --mijnkleur:black;
+    animation-delay:1.5s, 1.75s;
+}
 
+span:nth-of-type(8) {
+    --mijnkleur:yellow;
+    animation-delay:1.75s, 2s;
+}
+
+span:nth-of-type(9) {
+    --mijnkleur:black;
+    animation-delay:2s, 2.25s;
+}
+
+span:nth-of-type(10) {
+    --mijnkleur:green;
+    animation-delay:2.25s, 2.5s;
+}
+
+/*animatie groter*/
 @keyframes groterAni {
     0% {
         transform:scale(1);
     }
+    30% {
+        transform:scale(1.5);
+    }
     50% {
         transform:scale(1.5);
     }
+    75% {
+        transform:scale(1.5)
+    }
     100% {
-        transform:scale(1);
+        transform:scale(1)
     }
 }
 
+/*anitmatie verkleuren*/
 @keyframes verkleurAni {
     0% {
         color:inherit;
     }
-    10%, 60% {
+    5%, 80% {
         color:var(--mijnkleur);
     }
     100% {
         color:inherit;
     }
 }
+
+/*-----------------------------------------*/
+/* duiken inbeeld animatie 2*/
+section:nth-of-type(2) {
+    font-family: 'Black Han Sans', sans-serif;
+    padding: 50% 0;
+    position: relative;
+}
+
+section:nth-of-type(2) h1 {
+    position: absolute;
+    padding: 2em;
+    font-size: 1.5em;
+    z-index: 100;
+    top: 50%;
+}
+
+/* de zwarte balk*/
+section:nth-of-type(2):before {
+    content:"";
+    position:absolute;
+    width:12em; height:8em;
+    border:solid .2em black;
+    border-radius:1.5em;
+
+    background-image:radial-gradient(transparent .25em, white .25em .625em, transparent .625em),
+
+/*    background-size:1.5em 1.5em;*/
+    background-repeat:no-repeat;
+/*    background-position:12em 10em, 11em 20em;*/
+    z-index: 99;
+    top: 50%;
+}
+
+/* de witte streep op de balk*/
+section:nth-of-type(2):after {
+    content: "";
+    position: absolute;
+    width:2em;
+    border:solid .25em red;
+    left: 3em;
+    top: 11em;
+    z-index: 110;
+}
+
+section:nth-of-type(2):hover {
+
+}
+
+/* de golven*/
+.wave placement {
+  position: relative;
+  left: 2em;
+  top: 20em;
+}
+
+.waves {
+  width: 100%;
+  height: 30em;
+  margin-bottom:-7px;
+  min-height:200px;
+  max-height:150px;
+}
+
+.parallax > use {
+  animation: move 25s cubic-bezier(.50,.5,.40,.5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+  animation-delay: 1s;
+  animation-duration: 8s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -2s;
+  animation-duration: 9s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -3s;
+  animation-duration: 12s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -4s;
+  animation-duration: 21s;
+}
+
+@keyframes move {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% {
+    transform: translate3d(85px,0,0);
+  }
+}
+
+/*Shrinking for mobile*/
+@media (max-width: 768em) {
+  .waves {
+    height: 500em;
+    min-height:6em;
+  }
+/*
+  .content {
+    height:30vh;
+  }
+*/
+/*
+  h1 {
+    font-size:24px;
+  }
+}
+*/
+
+
+
+
+
+
+
+
+

@@ -24,9 +24,33 @@ body {
     --YellowLetter: yellow;
 
     color: var(--RoodLetter);
+    color:var(--textColor);
 
     background-color: aliceblue;
 
+    @media (prefers-color-scheme:dark){
+  body:not(.lightMode) {
+    /* dark theme */
+    --backgroundColor1: midnightblue;
+    --backgroundColor2: white;
+
+    --RoodLetter: red;
+    --BlauwLetter: blue;
+    --GreenLetter: green;
+    --BlackLetter: black;
+    --YellowLetter: yellow;
+/*
+    --titleColor:#D8DCE0;
+    --textColor:#A8ACB0;
+    --backgroundColor:#181C20;
+    --backgroundCardColor:#282C30;
+
+    --accentColor:#004d99;
+    --gradientColor:#8C0D26;
+    --hightLightColor:#995400;
+*/
+  }
+}
 }
 
 section {
@@ -86,7 +110,6 @@ section:nth-of-type(1):hover span {
     animation-iteration-count: infinite;
     animation-timing-function:ease-in-out;
     display: inline-block;
-    transform-origin: right bottom;
     padding: 1em .05em;
 }
 
@@ -246,27 +269,28 @@ section:nth-of-type(2):hover {
   max-height:150px;
 }
 
+/*
 section:nth-of-type(2):hover {
     animation-iteration-count: infinite;
 }
+*/
 
-.bewegen > use:hover{
+.bewegen > use{
   animation: move 25s cubic-bezier(.50,.5,.40,.5) infinite;
 }
-
-.bewegen > use:nth-child(1):hover {
+.bewegen:nth-of-type(1) {
   animation-delay: 1s;
   animation-duration: 8s;
 }
-.bewegen > use:nth-child(2):hover {
+.bewegen > use:nth-of-type(2) {
   animation-delay: -2s;
   animation-duration: 9s;
 }
-.bewegen > use:nth-child(3):hover {
+.bewegen > use:nth-of-type(3) {
   animation-delay: -3s;
   animation-duration: 12s;
 }
-.bewegen > use:nth-child(4):hover {
+.bewegen > use:nth-of-type(4) {
   animation-delay: -4s;
   animation-duration: 21s;
 }
@@ -308,7 +332,11 @@ section:nth-of-type(2) span:nth-of-type(1):after {
     left: 40%;
     z-index: 113;
 }
-
+section:nth-of-type(2).wave placement{
+animation-name: golven;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+}
 
 Shrinking for mobile
 @media (max-width: 768em) {
